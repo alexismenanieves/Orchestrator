@@ -9,9 +9,10 @@ activatePath="/.venv/bin/activate"
 echo "************** Initialize project template **************"
 python -m venv .venv
 source ${currentPath}${activatePath}
-python -m pip install ipykernel nbformat pytest black[jupyter]
-python -m pip install python-dotenv pandas seaborn scikit-learn 
-python -m pip install pydantic uvicorn reflex requests
+python -m pip install fastapi uvicorn reflex requests python-dotenv
+python -m pip install ipykernel nbformat pytest black
+python -m pip install pandas seaborn plotly great_tables
+python -m pip install scikit-learn statsmodels shap
 python -m pip install --upgrade pip
 python -m pip freeze > requirements.txt
 echo -e ".venv\n.env\n__pycache__" > .gitignore
